@@ -8,15 +8,16 @@ Overlay Services for BTMS Asset Exchange Marketplace
 
 #### Table of Contents
 
-*   [TokenLookupService](#tokenlookupservice)
+*   [MarketplaceLookupService](#marketplacelookupservice)
     *   [Parameters](#parameters)
 *   [TokenTopicManager](#tokentopicmanager)
+    *   [Parameters](#parameters-1)
     *   [identifyAdmissibleOutputs](#identifyadmissibleoutputs)
-        *   [Parameters](#parameters-1)
+        *   [Parameters](#parameters-2)
 
-### TokenLookupService
+### MarketplaceLookupService
 
-Implements a lookup service for tokens
+Implements a lookup service for marketplace
 
 #### Parameters
 
@@ -27,7 +28,18 @@ Implements a lookup service for tokens
 
 ### TokenTopicManager
 
-Implements a topic manager for token management
+Implements a topic manager for marketplace management
+
+#### Parameters
+
+*   `confederacyHost`   (optional, default `'https://confederacy.babbage.systems'`)
+*   `peerServHost`   (optional, default `'https://peerserv.babbage.systems'`)
+*   `messageBox`   (optional, default `'tokens-box'`)
+*   `protocolID`   (optional, default `'tokens'`)
+*   `basket`   (optional, default `'tokens'`)
+*   `topic`   (optional, default `'tokens'`)
+*   `satoshis`   (optional, default `1000`)
+*   `privateKey`   (optional, default `ANYONE`)
 
 #### identifyAdmissibleOutputs
 
@@ -37,7 +49,6 @@ Returns the outputs from the transaction that are admissible.
 
 *   `$0` **{previousUTXOs: [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<Output>, parsedTransaction: Transaction}**&#x20;
 
-    *   `$0.previousUTXOs` &#x20;
     *   `$0.parsedTransaction` &#x20;
 *   `object`  all params given in an object
 *   `previousUTXOs`  any previous UTXOs
