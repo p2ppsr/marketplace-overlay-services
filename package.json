@@ -1,0 +1,46 @@
+{
+  "name": "marketplace-overlay-services",
+  "version": "0.2.14",
+  "description": "Overlay Services for BTMS Asset Exchange Marketplace",
+  "main": "./out/src/index.js",
+  "types": "./out/src/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "standard --fix src/**/*.js",
+    "doc": "documentation readme src/index.ts -f md -s API -a public"
+  },
+  "author": "Peer-to-peer Privacy Systems Research, LLC",
+  "license": "Open BSV License",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.13.0",
+    "@types/node-fetch": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "documentation": "^14.0.2",
+    "eslint": "^8.34.0",
+    "jest": "^29.4.3",
+    "mock-knex": "^0.4.11",
+    "nodemon": "^2.0.4",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@bsv/sdk": "^1.0.15",
+    "babbage-bsv": "^0.2.4",
+    "btms-core": "^0.2.15",
+    "confederacy-base": "^0.1.2",
+    "cwi-base": "^0.4.19",
+    "mongodb": "^5.7.0",
+    "pushdrop": "^0.1.44",
+    "sendover": "^1.3.15"
+  }
+}
