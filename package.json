@@ -1,6 +1,6 @@
 {
   "name": "marketplace-overlay-services",
-  "version": "0.2.14",
+  "version": "0.1.0",
   "description": "Overlay Services for BTMS Asset Exchange Marketplace",
   "main": "./out/src/index.js",
   "types": "./out/src/index.d.ts",
