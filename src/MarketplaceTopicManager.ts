@@ -97,7 +97,7 @@ export class TokenTopicManager implements TopicManager {
           )
           const proofValid = await btms.verifyOwnership(parsedProof)
           if (!proofValid) {
-            const e = new Error('Invalid asset ownership oroof')
+            const e = new Error('Invalid asset ownership proof')
             console.error('Rejecting output for having an invalid asset ownership proof')
             throw e
           }
@@ -121,15 +121,15 @@ export class TokenTopicManager implements TopicManager {
             }
           }
 
-          outputsToAdmin.push(outputIndex)
+          outputsToAdmit.push(outputIndex)
 
         } catch (e) {
           continue
         }
-        return {
-          outputsToAdmit,
-          outputsToRetain: []
-        }
+      }
+      return {
+        outputsToAdmit,
+        outputsToRetain: []
       }
     } catch (error) {
       return {
