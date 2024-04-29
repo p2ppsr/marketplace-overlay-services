@@ -10,7 +10,7 @@ const ANYONE = '0000000000000000000000000000000000000000000000000000000000000001
  * Implements a topic manager for marketplace management
  * @public
  */
-export class TokenTopicManager implements TopicManager {
+export class MarketplaceTopicManager implements TopicManager {
   confederacyHost: string
   peerServHost: string
   messageBox: string
