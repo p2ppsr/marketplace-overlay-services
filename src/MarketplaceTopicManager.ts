@@ -23,10 +23,10 @@ export class MarketplaceTopicManager implements TopicManager {
   constructor(
     confederacyHost = 'https://confederacy.babbage.systems',
     peerServHost = 'https://peerserv.babbage.systems',
-    messageBox = 'tokens-box',
-    protocolID = 'tokens',
-    basket = 'tokens',
-    topic = 'tokens',
+    messageBox = 'marketplace-box',
+    protocolID = 'marketplace',
+    basket = 'marketplace',
+    topic = 'marketplace',
     satoshis = 1000,
     privateKey = ANYONE
   ) {
